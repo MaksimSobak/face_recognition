@@ -1,0 +1,34 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: face_recognition_app
+    env_file:
+      - .env  # Подключаем файл .env
+    environment:
+      - DATABASE_URL=postgresql://postgres@192.168.1.100:5432/postgres
+      - BOT_TOKEN=7585054657:AAEblTYuvk7tJgr4wu3TOfDF9uMB6SrvpUM  # Замените на реальный токен или используйте .env
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"  # Настройте порт, если приложение слушает другой порт
+    devices:
+      - "/dev/video0:/dev/video0"
+
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: postgres
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  postgres_data:
