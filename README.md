@@ -8,5 +8,8 @@ After downloading the project to your system, go to the face_recognition folder 
 3. Then in face_recognition folder on the command line you should write:
   pip install (full path of the file dlib-19.24.1-cp311-cp311-win_amd64.whl)
 
-4. Open the folder project_files and in config.py file you should change value of BOT_TOKEN variable to the TOKEN of your bot.
+4. Open the folder project_files and in config.py file you should change value of BOT_TOKEN variable to the TOKEN of your bot. Also you can change values of other variables, 
+the meaning of which you can read in the comments.
+5. To run bot you should write the next line: python bot.py
+
 
