@@ -1,4 +1,17 @@
-.dockerignore
+# Virtual environment
+venv/
 .env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
 .docker-compose.yml
 .Dockerfile
+.dockerignore
