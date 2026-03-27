@@ -8,6 +8,7 @@ from aiogram import Bot, Dispatcher, types
 from aiogram.types import Message, FSInputFile, InlineKeyboardMarkup, InlineKeyboardButton
 from aiogram.filters import CommandStart
 from project_files import config
+from project_files.recognition_algorythm import current_tolerance
 
 unknown_faces_state = {}
 
